@@ -19,13 +19,14 @@ int main(){
     int testCase;
     cin >> testCase;
     
-    // 입력
+    // Input
     for(int i = 0; i<testCase; i++){
         string name, status;
         cin >> name >> status;
         m[name] = status;
     }
     
+    // Search
     map<string, string>::iterator it;
     for(it = m.begin(); it!=m.end(); it++){
         if(it->second == "enter"){
