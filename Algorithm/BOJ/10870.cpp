@@ -7,13 +7,17 @@
 #include <iostream>
 using namespace std;
 
+long long x = 1;
+long long func(int num);
+
 int main() {
-    int dp[21];
-    dp[0] = 0;
-    dp[1] = 1;
     int num; cin >> num;
-    for( int i=2;i<21;i++){
-        dp[i] = dp[i-2] + dp[i-1];
-    }
-    cout<<dp[num]<<endl;
+    cout<< func(num) <<endl;
+}
+
+long long func(int num){
+    if (num == 1) return 1;
+    if (num == 2) return 1;
+    
+    return func(num - 1) + func(num - 2);;
 }
