@@ -7,61 +7,57 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
+
 using namespace std;
 
-int main(){
-    ios_base::sync_with_stdio(0);
-    cin.tie(0); cout.tie(0);
-    
-    vector<int> num, oper;
-    int minimum = 1000000000;
-    int maximum = -1000000000;
+int main() {
     int testCase; cin >> testCase;
+    vector<int>v(testCase);
+    vector<int>op;
     
-    // MARK: A 1,2.3.....
-    for(int i = 0 ; i < testCase ; i++){
-        int m; cin >> m;
-        num.push_back(m);
+    int maximum = -1000000000;
+    int minimun = 1000000000;
+    
+    // MARK: 배열 생성
+    for ( int i=0;i<testCase;i++) {
+        cin >> v[i];
     }
     
-    
-    // MARK: 1: 덧셈, 2: 뺄셈, 3: 곱셈, 4: 나눗셈
-    for(int i = 0 ; i < 4 ; i++){
-        int m; cin >> m;
+    // MARK: OPERATOR 배열 생성
+    for ( int i=0;i<4;i++) {
+        int num; cin >> num;
         
-        for(int j = 0 ; j < m ; j++){
-            oper.push_back(i + 1);
+        for ( int j = 0; j < num; j++) {
+            op.push_back(i);
         }
     }
     
-    do{
-        int ans = num[0];
-        
-        for(int i = 1 ; i < num.size() ; i++){
+    do {
+        int res = v[0];
+        // MARK: 연산자가 적용 되는 횟수는 (전체 원소-1) 만큼이다.
+        for ( int i=0;i<v.size()-1 ;i++){
             
-            switch(oper[i - 1]){
-                case 1:
-                    ans += num[i];
+            switch (op[i]) {
+                case  0:
+                    res += v[i + 1];
                     break;
-                    
-                case 2:
-                    ans -= num[i];
+                case  1:
+                    res -= v[i + 1];
                     break;
-                    
-                case 3:
-                    ans *= num[i];
+                case  2:
+                    res *= v[i + 1];
                     break;
-                    
-                case 4:
-                    ans /= num[i];
+                case  3:
+                    res /= v[i + 1];
                     break;
             }
         }
+        minimun = min(minimun,res);
+        maximum = max(maximum,res);
         
-        minimum = min(minimum, ans);
-        maximum = max(maximum, ans);
-        
-    } while(next_permutation(oper.begin(), oper.end()));
+    } while(next_permutation(op.begin(), op.end()));
     
-    cout << maximum << '\n' << minimum;
+    cout << maximum << endl;
+    cout << minimun << endl;
+    
 }
