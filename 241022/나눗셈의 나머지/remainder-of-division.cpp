@@ -9,7 +9,7 @@ int main() {
     vector<int>v(1000);
 
     while(1) {
-        if(num1 <= 0) {
+        if(num1 <= 1) {
             break;
         } 
         else {
