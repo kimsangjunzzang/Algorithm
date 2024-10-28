@@ -6,7 +6,7 @@ int main() {
     int num; cin >> num;
     int h = 0;
     int jj = 1;
-    for ( int i=1;i<=num;i++) {
+    for ( int i=1;i<=num*2;i++) {
 
         // 홀수 일때.
         if(i % 2 == 1) {
@@ -19,25 +19,6 @@ int main() {
                 cout << "* ";
             }
             jj++;
-        }
-        cout << endl;
-    }
-
-    for ( int i=1;i<=num;i++) {
-
-        // 홀수 일때.
-        if(i % 2 == 1) {
-            
-
-            for ( int j =jj;j>0;j--) {
-                cout << "* ";
-            }
-            jj++;
-        } else {
-            for ( int j =num-h;j>0;j--) {
-                cout << "* ";
-            }
-            h++;
         }
         cout << endl;
     }
