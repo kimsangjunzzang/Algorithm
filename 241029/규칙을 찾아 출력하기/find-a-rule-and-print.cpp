@@ -17,15 +17,21 @@ int main() {
     }
     cout << endl;
 
-    for ( int i=0;i<num-2;i++) {
-        for ( int j=0;j<=num;j++) {
+    for ( int i=1;i<=num-2;i++) {
+        for ( int j=1;j<=num;j++) {
+
+            if(j==num) {
+                cout <<"*";
+                break;
+            }
+
             if(j <= i ) {
                 cout << "* ";
             }
-            else if(j==num) cout <<"*";
             else {
-                cout<<" ";
+                cout<<"  ";
             }
+            
         }
         cout << endl;
     }
