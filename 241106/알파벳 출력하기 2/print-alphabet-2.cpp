@@ -10,7 +10,11 @@ int main() {
         for ( int j=1;j<=num;j++) {
             if(i<=j) {
                 cout << char('A'+cnt)<<" ";
+                if(cnt==25) {
+                    cnt = 0;
+                }else {
                 cnt++;
+                }
             } else {
                 cout<<"  ";
             }
