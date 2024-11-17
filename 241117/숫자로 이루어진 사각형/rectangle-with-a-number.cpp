@@ -9,8 +9,11 @@ void printF(int num) {
         for( int j=0;j<num;j++) {
             cout << cnt << " ";
             cnt++;
+            if(cnt == 10) {
+            cnt =1;
         }
-        if(cnt == 10) cnt =1;
+        }
+        
         cout << endl;
     }
 }
