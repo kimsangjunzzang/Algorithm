@@ -3,12 +3,14 @@ using namespace std;
 
 void printF(int num) {
     int cnt =1;
+
     for( int i=0;i<num;i++) {
 
         for( int j=0;j<num;j++) {
             cout << cnt << " ";
             cnt++;
         }
+        if(cnt == 10) cnt =1;
         cout << endl;
     }
 }
