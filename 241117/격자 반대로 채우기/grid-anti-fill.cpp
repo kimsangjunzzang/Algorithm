@@ -4,7 +4,8 @@
 using namespace std;
 
 int main() {
-    int n; cin >> n;
+    int n;
+    cin >> n;
     
     // n x n 격자 초기화
     vector<vector<int>> grid(n, vector<int>(n));
