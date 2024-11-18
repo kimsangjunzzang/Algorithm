@@ -13,7 +13,10 @@ int main() {
     int a,b; cin >> a >> b;
     int sum = 0;
 
-    if( a ==1 && b == 1) return 0;
+    if( a ==1 && b == 1) {
+        cout << 0 << endl;
+        return 0;
+    }
 
     for ( int i=a;i<=b;i++) {
         if(IsPrime(i))
