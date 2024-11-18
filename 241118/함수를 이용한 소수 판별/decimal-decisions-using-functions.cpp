@@ -1,3 +1,10 @@
+//
+//  main.cpp
+//  알고리즘
+//
+//  Created by 김상준 on 8/7/24.
+//
+
 #include <iostream>
 using namespace std;
 
@@ -14,11 +21,6 @@ bool IsPrime(int n) {
 int main() {
     int a,b; cin >> a >> b;
     int sum = 0;
-
-    if( a ==1 && b == 1) {
-        cout << 0 << endl;
-        return 0;
-    }
     for ( int i=a;i<=b;i++) {
         if(IsPrime(i)) sum += i;
     }
