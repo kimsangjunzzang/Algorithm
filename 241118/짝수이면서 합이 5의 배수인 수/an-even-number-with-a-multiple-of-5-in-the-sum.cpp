@@ -8,11 +8,13 @@ void printFunc(int num) {
         sum += num % 10; 
         num /= 10 ; 
     }
-    if(sum % 5 ==0) {
+    if(sum % 5 == 0) {
         cout << "Yes" <<endl;
     } else {
         cout << "No" <<endl;
     }
+    } else {
+        cout << "No" <<endl;
     }
 }
 
