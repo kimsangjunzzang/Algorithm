@@ -2,10 +2,10 @@
 using namespace std;
 
 bool IsPrime(int n) {
-    for(int i = 2; i < n; i++)
-        if(n % i == 0)
-            return false;
-
+    for(int i = 2; i < n; i++) {
+        if(n == 1) return false;
+        if(n % i == 0) return false;
+    }
     return true;
 }
 
@@ -17,14 +17,9 @@ int main() {
         cout << 0 << endl;
         return 0;
     }
-
     for ( int i=a;i<=b;i++) {
-        if(IsPrime(i))
-        sum += i;
+        if(IsPrime(i)) sum += i;
     }
     cout << sum << endl;
-
-    
-
     return 0;
 }
