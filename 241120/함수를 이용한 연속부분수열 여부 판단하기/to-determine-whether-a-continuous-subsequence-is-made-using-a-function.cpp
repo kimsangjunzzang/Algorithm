@@ -19,7 +19,7 @@ int main() {
         str2 += c;
     }
 
-    if(str1.find(str2)) cout << "Yes" << endl;
+    if(str1.find(str2) != string::npos) cout << "Yes" << endl;
     else cout << "No" << endl;
 
     return 0;
