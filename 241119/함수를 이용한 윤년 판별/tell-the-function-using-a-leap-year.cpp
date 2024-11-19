@@ -7,8 +7,10 @@ int main() {
 
     if(year % 4 == 0) {
         if(year % 100 == 0) {
-            if(year % 400 != 0) cout << "false" << endl;
-            return 0;
+            if(year % 400 != 0) {
+                cout << "false" << endl;
+                return 0;
+            }
         } 
         cout << "true" << endl;
     } else {
