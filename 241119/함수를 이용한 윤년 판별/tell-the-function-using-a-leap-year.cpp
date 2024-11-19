@@ -12,7 +12,7 @@ int main() {
         } 
         cout << "true" << endl;
     } else {
-        cout << "false" << emdl;
+        cout << "false" << endl;
     }
     
     return 0;
